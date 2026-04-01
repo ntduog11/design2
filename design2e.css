@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    text-align: center;
+}
+
+figure {
+    margin: 10px;
+}
+
+img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+@media (min-width: 772px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    figure:nth-child(3n) {
+        grid-column: span 2;
+    }
+
+    img {
+        border-radius: 0;
+    }
+}
+
+@media (min-width: 998px) {
+    body {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
